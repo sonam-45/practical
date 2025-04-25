@@ -26,4 +26,27 @@ API_KEY=your_api_key
   - Live classes with real-time interaction.
   - Personalized learning paths based on assessments.
   - Community forums for peer discussion.
+flowchart TB
+  A[Home Page: index.html] --> B[Login Page: login.html]
+  B --> C[Booking Page: booking.html]
+  C --> D[Bus List: buses.html]
+  D --> E[Seat Selection: bookseat.html]
+
+  %% General Ticket Page
+  E --> F[Ticket Page: ticket.html]
+  F --> F1[Passenger Info]
+  F --> F2[Bus Info]
+  F --> F3[Fare Summary]
+
+  %% From Ticket.html to specific services
+  F --> G1[CTU Ticket: ticketCTU.html]
+  F --> G2[HRTC Ticket: ticketHRTC.html]
+  F --> G3[PRTC Ticket: ticketprtc.html]
+
+  %% Then to Payment
+  G1 --> H[Payment Page: paymentsystem.html]
+  G2 --> H
+  G3 --> H
+
+  H --> I[Bus-stop: bus-stop.html]
 
